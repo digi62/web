@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mubashir Hanif - CEO of TechMatter</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+      --header-bg: #2196F3;
+      --nav-bg: #0056b3;
+      --section-bg: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --header-bg: #1e1e1e;
+      --nav-bg: #2c2c2c;
+      --section-bg: #1e1e1e;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1rem;
+    }
+    nav {
+      background-color: var(--nav-bg);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: var(--section-bg);
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      animation: fadeInUp 1s ease both;
+    }
+    h2 {
+      color: var(--text-color);
+    }
+    footer {
+      text-align: center;
+      background: #eee;
+      padding: 1rem;
+      font-size: 0.9em;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .toggle-theme {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ccc;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<button class="toggle-theme" onclick="toggleTheme()">🌗 Toggle Theme</button>
+
+<header>
+  <img src="mubashirhanif.jpg" alt="Mubashir Hanif" class="profile-img" />
+  <h1>Mubashir Hanif</h1>
+  <p>Founder & CEO – TechMatter</p>
+  <p>Driving AI-led Healthcare Innovation</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#services">Services</a>
+  <a href="#ai">AI</a>
+  <a href="#growth">Growth</a>
+  <a href="#vision">Vision</a>
+  <a href="#media">Media</a>
+</nav>
+
+<section id="about">
+  <h2>ℹ️ About Mubashir</h2>
+  <p>Mubashir Hanif is the Founder and CEO of <strong>TechMatter</strong>, a global health tech company headquartered in California...</p>
+</section>
+
+<section id="leadership">
+  <h2>🧭 Leadership Philosophy</h2>
+  <ul>
+    <li><strong>"Give to Get"</strong> – a leadership style rooted in fairness, empowerment, and long-term partnerships.</li>
+    <li>Emphasizes structure, minimal distractions, visualization, and healthy lifestyle habits to drive productivity.</li>
+  </ul>
+</section>
+
+<section id="services">
+  <h2>💼 TechMatter Services</h2>
+  <ul>
+    <li>Revenue Cycle Management (RCM)</li>
+    <li>Medical Billing & Coding</li>
+    <li>Credentialing & Eligibility Verification</li>
+    <li>Digital Transformation</li>
+  </ul>
+</section>
+
+<section id="ai">
+  <h2>🤖 AI & Innovation</h2>
+  <ul>
+    <li>Automation of clinical documentation and notes</li>
+    <li>Predictive analytics and denial management</li>
+  </ul>
+</section>
+
+<section id="growth">
+  <h2>🚀 Achievements & Growth</h2>
+  <ul>
+    <li>Scaled TechMatter from 10 to 500+ employees globally</li>
+    <li>Acquired DoctorPapers to boost RCM offerings</li>
+  </ul>
+</section>
+
+<section id="vision">
+  <h2>🔭 Vision & Future</h2>
+  <p>Mubashir envisions a future where AI-powered tech simplifies healthcare and enhances patient outcomes...</p>
+</section>
+
+<section id="media">
+  <h2>🗞 Media & Interviews</h2>
+  <ul>
+    <li><a href="https://ideamensch.com/mubashir-hanif/" target="_blank">Ideamensch Interview</a></li>
+    <li><a href="https://valiantceo.com/navigating-ai-strategies-mubashir-hanif-of-techmatter/" target="_blank">ValiantCEO Feature</a></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Mubashir Hanif | Built with ❤️ using GitHub Pages
+</footer>
+
+<script>
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  });
+</script>
+
+</body>
+</html>
